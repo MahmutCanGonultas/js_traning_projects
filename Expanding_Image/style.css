@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+}
+
+.panel {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0rem 1.2rem;
+  border-radius: 50px;
+  flex: 0.5;
+  height: 80vh;
+  cursor: pointer;
+  position: relative;
+  transition: all 1s ease-in;
+}
+
+h3 {
+  font-size: 24px;
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+@media (max-width: 500px) {
+  .panel:nth-of-type(5),
+  .panel:nth-of-type(4) {
+    display: none;
+  }
+}
