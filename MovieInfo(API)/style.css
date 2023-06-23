@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+  --primary-color: #0c134f;
+  --secondary-color: #1d267d;
+  --joker-color: #2e8a99;
+  --joker-color-secondary: #84a7a1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  height: 100vh;
+  color: #fff;
+  background-color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+/*! HEADER */
+
+#header {
+  background-color: var(--secondary-color);
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.logo {
+  height: 10rem;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+.search::placeholder {
+  color: #7378c5;
+}
+
+.search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+/*! MAIN */
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  height: 52rem;
+  position: relative;
+  object-fit: cover;
+  overflow: hidden;
+  margin: 2rem;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  transition: transform 0.2s ease-in;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.movie-info span {
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  color: #333;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+  overflow-y: auto;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
